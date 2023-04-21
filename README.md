@@ -1,15 +1,22 @@
 # ms-ra-forwarder-for-ifreetime
-从 ms-ra-forwarder fork 这个项目的初衷是为了能够在爱阅书香中听“晓晓”念书。由于原项目不支持爱阅书香，所以想要把原项目和 [iranee/ifreetime] 结合一下，并且写了一篇教程。
+从 ms-ra-forwarder fork 这个项目的初衷是为了能够在爱阅书香中听“晓晓”念书。
+
+由于原项目不支持爱阅书香，所以想要把原项目和 [iranee/ifreetime] 结合一下，并且写了一篇教程。
+
 结果大佬 [@justnsms](https://t.me/justnsms) 出现在了群里，并且写了这个项目对比原项目所有新增和改变的代码，非常感谢
+
 在大佬的帮助下，现在不再需要[iranee/ifreetime]项目和php环境，即可通过爱阅书香听书。
 ## 部署
 ### 部署到vercel
-有token
+需要token
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyy4382%2Fms-ra-forwarder-for-ifreetime&env=TOKEN&project-name=ms-ra-forwarder-for-ifreetime&repository-name=ms-ra-forwarder-for-ifreetime)
 
-无token
+不需要token
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyy4382%2Fms-ra-forwarder-for-ifreetime&project-name=ms-ra-forwarder-for-ifreetime&repository-name=ms-ra-forwarder-for-ifreetime)
 ### docker compose
+
 ```yaml
 
 version: '3'
@@ -27,6 +34,7 @@ services:
     #environment: 
     #  - TOKEN=自定义TOKEN
 ```
+
 ## 爱阅配置：
 见我的博客：
 
