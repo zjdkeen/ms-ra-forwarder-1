@@ -10,6 +10,7 @@ app.use(express.static('public'))
 
 app.get('/api/legado', require('./api/legado'))
 app.post('/api/ra', require('./api/ra'))
+app.get('/api/aiyue', require('./api/aiyue'))
 app.get('/api/azure', require('./api/azure'))
 app.post('/api/azure', require('./api/azure'))
 app.listen(port, () => {
