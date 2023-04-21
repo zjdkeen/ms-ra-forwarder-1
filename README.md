@@ -1,3 +1,42 @@
+# ms-ra-forwarder-for-ifreetime
+从 ms-ra-forwarder fork 这个项目的初衷是为了能够在爱阅书香中听“晓晓”念书。由于原项目不支持爱阅书香，所以想要把原项目和 [iranee/ifreetime] 结合一下，并且写了一篇教程。
+结果大佬 [@justnsms](https://t.me/justnsms) 出现在了群里，并且写了这个项目对比原项目所有新增和改变的代码，非常感谢
+在大佬的帮助下，现在不再需要[iranee/ifreetime]项目和php环境，即可通过爱阅书香听书。
+## 部署
+### 部署到vercel
+有token
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyy4382%2Fms-ra-forwarder-for-ifreetime&env=TOKEN&project-name=ms-ra-forwarder-for-ifreetime&repository-name=ms-ra-forwarder-for-ifreetime)
+
+无token
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyy4382%2Fms-ra-forwarder-for-ifreetime&project-name=ms-ra-forwarder-for-ifreetime&repository-name=ms-ra-forwarder-for-ifreetime)
+### docker compose
+```yaml
+
+version: '3'
+
+services:
+  ifreetimeTTS:
+    container_name: ifreetimeTTS
+    image: yunfinibol/ms-ra-forwarder-for-ifreetime:latest
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    # 如果可以保持自己的ip或者完整域名不公开的话，可以不用设置环境变量
+    environment: []
+    #需要的话把上边一行注释，下面两行取消注释
+    #environment: 
+    #  - TOKEN=自定义TOKEN
+```
+## 爱阅配置：
+见我的博客：
+
+[vercel部署版](https://blog.yunfinibol.top/2023/04/21/%E5%AE%8C%E5%85%A8%E5%85%8D%E8%B4%B9%E7%9A%84%E7%88%B1%E9%98%85%E4%B9%A6%E9%A6%99%E5%90%AC%E4%B9%A6-%E5%BE%AE%E8%BD%AFTTS-vercel%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97/)
+
+[自建docker版](https://blog.yunfinibol.top/2023/04/19/%E7%88%B1%E9%98%85%E4%B9%A6%E9%A6%99%E9%85%8D%E7%BD%AE%E5%BE%AE%E8%BD%AFtts%E5%90%AC%E4%B9%A6/)
+
+
+> 以下是原项目的readme
+
 # ms-ra-forwarder
 
 创建这个项目的初衷是为了能够在[阅读（legado）](https://github.com/gedoor/legado)中听“晓晓”念书。由于其中的脚本引擎不支持 WebSocket ，所以包装了一下微软 Edge 浏览器“大声朗读”的接口。
