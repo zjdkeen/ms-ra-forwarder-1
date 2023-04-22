@@ -15,6 +15,19 @@
 不需要token
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fyy4382%2Fms-ra-forwarder-for-ifreetime&project-name=ms-ra-forwarder-for-ifreetime&repository-name=ms-ra-forwarder-for-ifreetime)
+
+### docker
+
+```bash
+docker run -d \
+  --name ifreetimeTTS \
+  -p 3000:3000 \
+  --restart unless-stopped \
+  -e TOKEN=example \ #可选
+  yunfinibol/ms-ra-forwarder-for-ifreetime:latest
+
+```
+
 ### docker compose
 
 ```yaml
