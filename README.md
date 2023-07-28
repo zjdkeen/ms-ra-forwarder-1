@@ -1,12 +1,19 @@
 # ms-ra-forwarder-for-ifreetime
 从 ms-ra-forwarder fork 这个项目的初衷是为了能够在爱阅书香中听“晓晓”念书。
 
-由于原项目不支持爱阅书香，所以想要把原项目和 [iranee/ifreetime] 结合一下，并且写了一篇教程。
+由于原项目不支持爱阅书香，所以想要把原项目和 [iranee/ifreetime](https://github.com/iranee/ifreetime) 结合一下，并且写了一篇教程。
 
 结果大佬 [@justnsms](https://t.me/justnsms) 出现在了群里，并且写了这个项目对比原项目所有新增和改变的代码，非常感谢
 
-在大佬的帮助下，现在不再需要[iranee/ifreetime]项目和php环境，即可通过爱阅书香听书。
+在大佬的帮助下，现在不再需要 [iranee/ifreetime](https://github.com/iranee/ifreetime) 项目和php环境，即可通过爱阅书香听书。
 ## 部署
+
+建议看我的博客文章上的详细步骤来部署，README.md 中只会提供过程概要
+
+[vercel部署版](https://blog.yfi.moe/post/ifreetime-mstts-vercel/)
+
+[自建docker版](https://blog.yfi.moe/post/ifreetime-mstts-selfhost/)
+
 ### 部署到vercel
 需要token
 
@@ -51,12 +58,14 @@ services:
 ## 爱阅配置：
 见我的博客：
 
-[vercel部署版](https://blog.yunfinibol.top/2023/04/21/%E5%AE%8C%E5%85%A8%E5%85%8D%E8%B4%B9%E7%9A%84%E7%88%B1%E9%98%85%E4%B9%A6%E9%A6%99%E5%90%AC%E4%B9%A6-%E5%BE%AE%E8%BD%AFTTS-vercel%E9%83%A8%E7%BD%B2%E6%8C%87%E5%8D%97/)
+[vercel部署版](https://blog.yfi.moe/post/ifreetime-mstts-vercel/)
 
-[自建docker版](https://blog.yunfinibol.top/2023/04/19/%E7%88%B1%E9%98%85%E4%B9%A6%E9%A6%99%E9%85%8D%E7%BD%AE%E5%BE%AE%E8%BD%AFtts%E5%90%AC%E4%B9%A6/)
+[自建docker版](https://blog.yfi.moe/post/ifreetime-mstts-selfhost/)
 
 
 > 以下是原项目的readme
+
+
 
 # ms-ra-forwarder
 
